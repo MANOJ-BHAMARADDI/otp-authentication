@@ -6,7 +6,7 @@ const Login = () => {
   const navigate = useNavigate();
 
   const handleValidate = () => {
-    if (email) {
+    if (email && email.includes("@")) {
       const generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
       localStorage.setItem("otp", generatedOtp);
       alert(`Your OTP is: ${generatedOtp}`);
