@@ -1,47 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const [otp, setOtp] = useState("");
-  const [timer, setTimer] = useState(30);
+  const [email, setEmail] = useState("");
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
-    localStorage.setItem("otp", generatedOtp);
-    alert(`Your OTP is: ${generatedOtp}`);
-
-    const countdown = setInterval(() => {
-      setTimer((prev) => {
-        if (prev === 1) clearInterval(countdown);
-        return prev - 1;
-      });
-    }, 1000);
-
-    return () => clearInterval(countdown);
-  }, []); 
-
-  const handleSubmit = () => {
-    const storedOtp = localStorage.getItem("otp");
-
-    if (otp === storedOtp && timer > 0) {
-      navigate("/dashboard");
+  const handleValidate = () => {
+    if (email) {
+      const generatedOtp = Math.floor(100000 + Math.random() * 900000).toString();
+      localStorage.setItem("otp", generatedOtp);
+      alert(`Your OTP is: ${generatedOtp}`);
+      navigate("/otp-enter");
     } else {
-      navigate("/resend");
+      alert("Please enter a valid email address.");
     }
   };
 
   return (
     <div>
-      <h2>Enter OTP</h2>
+      <h2>Enter Email</h2>
       <input
-        type="text"
-        value={otp}
-        onChange={(e) => setOtp(e.target.value)}
-        placeholder="Enter OTP"
+        type="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+        placeholder="Enter your email"
       />
-      <button onClick={handleSubmit}>Verify OTP</button>
-      <p>Time left: {timer}s</p>
+      <button onClick={handleValidate}>Validate</button>
     </div>
   );
 };
