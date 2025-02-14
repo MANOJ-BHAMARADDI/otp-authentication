@@ -17,15 +17,20 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h2>Enter Email</h2>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
-      />
-      <button onClick={handleValidate}>Validate</button>
+    <div className="container">
+      <div className="card">
+        <h2 className="heading">Enter Email</h2>
+        <input
+          type="email"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          placeholder="Enter your email"
+          className="input"
+        />
+        <button onClick={handleValidate} className="btn">
+          Validate
+        </button>
+      </div>
     </div>
   );
 };

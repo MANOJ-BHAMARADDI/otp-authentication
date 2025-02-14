@@ -34,16 +34,21 @@ const OtpEnter = () => {
   };
 
   return (
-    <div>
-      <h2>Enter OTP</h2>
-      <input
-        type="text"
-        value={otp}
-        onChange={(e) => setOtp(e.target.value)}
-        placeholder="Enter OTP"
-      />
-      <button onClick={handleSubmit}>Verify OTP</button>
-      <p>Time left: {timer}s</p>
+    <div className="container">
+      <div className="card">
+        <h2 className="heading">Enter OTP</h2>
+        <input
+          type="text"
+          value={otp}
+          onChange={(e) => setOtp(e.target.value)}
+          placeholder="Enter OTP"
+          className="input"
+        />
+        <button onClick={handleSubmit} className="btn">
+          Verify OTP
+        </button>
+        <p className="text-white mt-4">Time left: {timer}s</p>
+      </div>
     </div>
   );
 };
