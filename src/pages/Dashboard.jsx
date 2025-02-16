@@ -22,7 +22,7 @@ const Dashboard = () => {
       </button>
       <div className="flex justify-center items-center h-full">
         <img
-          src="https://i.imgur.com/pncfpN1.png" // Replace with your image URL
+          src="https://i.imgur.com/pncfpN1.png"
           alt="Dashboard"
           className="w-full h-full object-cover"
           onContextMenu={handleContextMenu}

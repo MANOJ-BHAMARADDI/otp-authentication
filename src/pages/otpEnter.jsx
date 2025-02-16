@@ -16,7 +16,7 @@ const OtpEnter = () => {
 
   const startCountdown = () => {
     clearInterval(countdownRef.current);
-    setTimer(30); // Reset the timer to 30 seconds
+    setTimer(30); // Reset timer to 30 seconds
     countdownRef.current = setInterval(() => {
       setTimer((prev) => {
         if (prev === 1) {
