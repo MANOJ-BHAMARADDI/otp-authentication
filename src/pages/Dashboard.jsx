@@ -8,13 +8,25 @@ const Dashboard = () => {
     navigate("/");
   };
 
+  const handleContextMenu = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div className="container">
-      <div className="card">
-        <h2 className="heading">Welcome to the Dashboard</h2>
-        <button onClick={handleLogout} className="btn">
-          Logout
-        </button>
+    <div className="relative min-h-screen bg-gray-900">
+      <button
+        onClick={handleLogout}
+        className="btn absolute top-1.5 right-4"
+      >
+        Logout
+      </button>
+      <div className="flex justify-center items-center h-full">
+        <img
+          src="https://i.imgur.com/BrtcWkM.png" // Replace with your image URL
+          alt="Dashboard"
+          className="w-full h-full object-cover"
+          onContextMenu={handleContextMenu}
+        />
       </div>
     </div>
   );

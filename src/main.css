@@ -16,11 +16,11 @@
 }
 
 .container {
-  @apply flex justify-center items-center min-h-screen bg-gray-900;
+  @apply flex justify-center items-center min-h-screen;
 }
 
 .card {
-  @apply bg-gray-800 p-6 rounded-lg shadow-lg w-full max-w-md text-center;
+  @apply bg-gray-800 bg-opacity-75 p-6 rounded-lg shadow-lg w-full max-w-4xl text-center;
 }
 
 .heading {
