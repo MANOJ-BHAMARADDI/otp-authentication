@@ -16,13 +16,13 @@ const Dashboard = () => {
     <div className="relative min-h-screen bg-gray-900">
       <button
         onClick={handleLogout}
-        className="btn absolute top-1.5 right-4"
+        className="btn absolute top-2.5 right-4"
       >
         Logout
       </button>
       <div className="flex justify-center items-center h-full">
         <img
-          src="https://i.imgur.com/BrtcWkM.png" // Replace with your image URL
+          src="https://i.imgur.com/pncfpN1.png" // Replace with your image URL
           alt="Dashboard"
           className="w-full h-full object-cover"
           onContextMenu={handleContextMenu}

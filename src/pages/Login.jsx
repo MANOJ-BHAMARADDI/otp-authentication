@@ -18,7 +18,7 @@ const Login = () => {
 
   return (
     <div className="relative min-h-screen flex flex-col justify-between bg-gray-900 bg-cover bg-center" style={{ backgroundImage: "url('https://i.imgur.com/07vT2xk.png')" }}>
-      <div className="absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-xl font-bold">
+      <div className="glass-effect absolute top-4 left-1/2 transform -translate-x-1/2 text-white text-xl font-bold p-2 rounded">
         Analytics Dashboard
       </div>
       <div className="container flex-grow flex justify-center items-center">
@@ -49,7 +49,7 @@ const Login = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm">
+      <div className="glass-effect absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm p-2 rounded">
         © 2025, Greendzine Technologies Pvt. Ltd. All Rights Reserved.
       </div>
     </div>
