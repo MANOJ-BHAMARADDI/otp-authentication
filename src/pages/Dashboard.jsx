@@ -13,7 +13,7 @@ const Dashboard = () => {
   };
 
   return (
-    <div className="relative min-h-screen bg-gray-900">
+    <div className="relative min-h-screen bg-gray-900" style={{ backgroundImage: "url('https://i.imgur.com/07vT2xk.png')" }}>
       <button
         onClick={handleLogout}
         className="btn absolute top-2.5 right-4"
@@ -22,7 +22,6 @@ const Dashboard = () => {
       </button>
       <div className="flex justify-center items-center h-full">
         <img
-          src="https://i.imgur.com/pncfpN1.png"
           alt="Dashboard"
           className="w-full h-full object-cover"
           onContextMenu={handleContextMenu}

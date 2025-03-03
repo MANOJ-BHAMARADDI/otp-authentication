@@ -98,7 +98,7 @@ const OtpEnter = () => {
 
       {/* Footer */}
       <div className="glass-effect absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white text-sm p-2 rounded">
-        © 2025, Greendzine Technologies Pvt. Ltd. All Rights Reserved.
+        © 2025, All Rights Reserved.
       </div>
     </div>
   );
